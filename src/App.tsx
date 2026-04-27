@@ -358,7 +358,7 @@ export default function App() {
                 </div>
                 <div>
                   <p className="text-sm text-brand-ink/60 uppercase tracking-wider font-semibold">Ring Us</p>
-                  <p className="font-medium">1 (800) 555-0199</p>
+                  <p className="font-medium">(786) 823-4709</p>
                 </div>
               </div>
               <div className="flex items-center gap-4 text-brand-ink">
