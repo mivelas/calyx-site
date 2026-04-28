@@ -18,10 +18,10 @@ import { useState } from 'react';
 
 const SERVICES = [
   {
-    title: 'Estate Oversight',
-    description: 'Regular walk-throughs, security checks, and post-storm inspections vital for your peace of mind.',
-    extendedDescription: 'Our hands-on oversight means we treat your home like our own. From routine perimeter checks to immediate post-storm evaluations, we identify potential issues before they become costly emergencies.',
-    features: ['Thorough interior & exterior inspections', 'Post-storm damage assessments', 'Security alarm response', 'Detailed photo reports'],
+    title: 'Professional Home Watch',
+    description: 'Specialized visual inspections and security checks designed for Southwest Florida residents.',
+    extendedDescription: 'Professional Home Watch is a visual inspection of a home or property, looking for obvious issues. Our hands-on oversight means we treat your home like our own—identifying potential issues before they become costly emergencies.',
+    features: ['Regular interior & exterior home watch visits', 'Post-storm damage assessments', 'Visual check of HVAC, plumbing, & electrical', 'Secure keyholding & alarm response'],
     icon: ShieldCheck,
   },
   {
@@ -33,9 +33,9 @@ const SERVICES = [
   },
   {
     title: 'Technical Maintenance',
-    description: 'Managing repairs, pool service coordination, and continuous HVAC monitoring to prevent surprises.',
-    extendedDescription: 'Complex properties require continuous upkeep. We oversee your home\'s mechanical systems, coordinating preventative maintenance and rapid repairs with Southwest Florida\'s most trusted technicians.',
-    features: ['HVAC system monitoring & filter changes', 'Pool & spa service coordination', 'Appliance maintenance', 'Emergency repair dispatch'],
+    description: 'From small handyman tasks to large-scale projects managed by general contractors.',
+    extendedDescription: 'Complex properties require continuous upkeep. We maintain an elite network of experts ready for any scale of work—from quick handyman repairs to major renovations overseen by licensed general contractors.',
+    features: ['Access to licensed general contractors', 'Reliable handyman referral & oversight', 'HVAC monitoring & filter changes', 'Emergency repair dispatch'],
     icon: Wrench,
   },
   {
@@ -223,11 +223,11 @@ export default function App() {
           >
             <ShieldCheck className="w-12 h-12 text-brand-accent mx-auto mb-8 stroke-[1.5]" />
             <h2 className="text-3xl md:text-5xl font-serif leading-snug text-brand-ink mb-8 font-normal">
-              "You don't need a handyman, a pet sitter, and a cleaning crew. <br className="hidden md:block" />
-              <span className="italic">You just need Calyx.</span>"
+              "You don't need a multi-vendor headache. <br className="hidden md:block" />
+              <span className="italic text-brand-accent">You just need Calyx.</span>"
             </h2>
             <p className="text-lg text-brand-ink/80 max-w-2xl mx-auto leading-relaxed">
-              We act as your single point of contact. From storm preparation and vendor management to welcoming you home with a stocked fridge, we handle the complexities of home ownership so you don't have to. 
+              We provide a superior alternative to standard home watch services by acting as your single point of contact. With an established network of trusted experts—ranging from reliable handymen to licensed general contractors—we handle the complexities of home ownership so you don't have to. 
             </p>
           </motion.div>
         </div>
@@ -321,7 +321,7 @@ export default function App() {
                 We aren't just a property management company; we are Southwest Florida residents. We've weathered the major hurricanes alongside our community. We know intimately the anxiety of wondering if your property is secure, if the pool cage held up, or if there's water intrusion after a major storm. 
               </p>
               <p>
-                That firsthand experience is why Calyx was founded. When we survey your property post-storm, we're looking with the experienced eyes of locals who know exactly what to check. Additionally, as a fully bilingual team (English and Spanish), we ensure clear, seamless communication with you and a wide network of local vendors.
+                That firsthand experience is why Calyx was founded. When we survey your property post-storm, or during our routine weekly home watch visits, we're looking with the experienced eyes of locals who know exactly what to check. Additionally, as a fully bilingual team (English and Spanish), we ensure clear, seamless communication with you and a wide network of local vendors.
               </p>
               <div className="p-8 bg-white rounded-xl border border-brand-accent/10 shadow-sm mt-12 flex flex-col md:flex-row gap-6 items-start">
                 <div className="w-12 h-12 bg-brand-sand rounded-md flex items-center justify-center shrink-0">
@@ -507,4 +507,3 @@ export default function App() {
     </div>
   );
 }
-
