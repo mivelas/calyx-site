@@ -124,10 +124,10 @@ export default function App() {
           
           {/* Desktop Nav */}
           <div className={`hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest ${isScrolled ? 'text-brand-ink' : 'text-white'}`}>
-            <button onClick={() => scrollToSection('about')} className="hover:text-brand-accent transition-colors">About</button>
-            <button onClick={() => scrollToSection('whoweare')} className="hover:text-brand-accent transition-colors">Who We Are</button>
-            <button onClick={() => scrollToSection('services')} className="hover:text-brand-accent transition-colors">Services</button>
-            <button onClick={() => scrollToSection('contact')} className="hover:text-brand-accent transition-colors">Contact</button>
+            <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }} className="hover:text-brand-accent transition-colors">About</a>
+            <a href="#whoweare" onClick={(e) => { e.preventDefault(); scrollToSection('whoweare'); }} className="hover:text-brand-accent transition-colors">Who We Are</a>
+            <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} className="hover:text-brand-accent transition-colors">Services</a>
+            <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} className="hover:text-brand-accent transition-colors">Contact</a>
           </div>
 
           <button 
@@ -155,10 +155,10 @@ export default function App() {
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-40 bg-brand-bg pt-24 px-6">
           <div className="flex flex-col gap-6 text-xl font-serif text-brand-ink">
-            <button onClick={() => scrollToSection('about')} className="text-left w-full pb-4 border-b border-black/10">About</button>
-            <button onClick={() => scrollToSection('whoweare')} className="text-left w-full pb-4 border-b border-black/10">Who We Are</button>
-            <button onClick={() => scrollToSection('services')} className="text-left w-full pb-4 border-b border-black/10">Services</button>
-            <button onClick={() => scrollToSection('contact')} className="text-left w-full pb-4 border-b border-black/10">Contact</button>
+            <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }} className="text-left w-full pb-4 border-b border-black/10">About</a>
+            <a href="#whoweare" onClick={(e) => { e.preventDefault(); scrollToSection('whoweare'); }} className="text-left w-full pb-4 border-b border-black/10">Who We Are</a>
+            <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} className="text-left w-full pb-4 border-b border-black/10">Services</a>
+            <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} className="text-left w-full pb-4 border-b border-black/10">Contact</a>
           </div>
         </div>
       )}
@@ -428,16 +428,44 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-brand-bg text-brand-ink/60 py-12 px-6 border-t border-black/10 text-sm">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="font-serif text-brand-accent text-lg font-bold tracking-tight">
-            CALYX CONCIERGE
+      <footer className="bg-brand-bg text-brand-ink/60 py-16 px-6 border-t border-black/10 text-sm">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div>
+              <div className="font-serif text-brand-accent text-lg font-bold tracking-tight mb-4">
+                CALYX CONCIERGE
+              </div>
+              <p className="max-w-xs leading-relaxed">
+                Southwest Florida's premier Professional Home Watch and property care specialists. Providing peace of mind for absent homeowners.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-brand-ink mb-4 uppercase tracking-wider text-xs">Service Areas</h4>
+              <ul className="space-y-2">
+                <li>Cape Coral Home Watch</li>
+                <li>Fort Myers Property Care</li>
+                <li>Naples Estate Oversight</li>
+                <li>Bonita Springs & Marco Island</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-brand-ink mb-4 uppercase tracking-wider text-xs">Contact</h4>
+              <ul className="space-y-2">
+                <li>(786) 823-4709</li>
+                <li>hello@calyxconcierge.com</li>
+                <li className="italic font-serif text-brand-accent">Bilingual: English & Español</li>
+              </ul>
+            </div>
           </div>
-          <div className="font-serif italic text-base text-brand-accent">
-            Serving Cape Coral, Fort Myers, Naples, Bonita Springs, & Marco Island
-          </div>
-          <div>
-            &copy; {new Date().getFullYear()} Calyx Concierge Property Management
+          <div className="pt-8 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+              &copy; {new Date().getFullYear()} Calyx Concierge Property Management
+            </div>
+            <div className="flex gap-6">
+              <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }} className="hover:text-brand-accent">About</a>
+              <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} className="hover:text-brand-accent">Services</a>
+              <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} className="hover:text-brand-accent">Contact</a>
+            </div>
           </div>
         </div>
       </footer>
@@ -507,3 +535,4 @@ export default function App() {
     </div>
   );
 }
+
