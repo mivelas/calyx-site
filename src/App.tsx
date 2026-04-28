@@ -54,6 +54,35 @@ const SERVICES = [
   },
 ];
 
+const Logo = ({ isScrolled, className = "" }: { isScrolled?: boolean; className?: string }) => (
+  <div className={`flex items-center gap-3 ${className}`}>
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
+      <path 
+        d="M20 4L32 10V22C32 29.5 27 34.5 20 36C13 34.5 8 29.5 8 22V10L20 4Z" 
+        fill="#064e3b" // Deep Emerald
+      />
+      <path 
+        d="M20 8L28 12V20C28 25.5 24.5 29.5 20 31V8Z" 
+        fill="#c5a059" // Matte Gold
+        fillOpacity="0.8"
+      />
+      <path 
+        d="M20 8L12 12V20C12 25.5 15.5 29.5 20 31V8Z" 
+        fill="#c5a059" 
+        fillOpacity="0.4"
+      />
+      <path 
+        d="M20 12C20 12 23 15 23 20C23 25 20 28 20 28C20 28 17 25 17 20C17 15 20 12 20 12Z" 
+        fill="white" 
+        fillOpacity="0.9"
+      />
+    </svg>
+    <span className={`text-2xl tracking-tighter font-serif font-bold ${isScrolled ? 'text-brand-accent' : 'text-white'}`}>
+      CALYX CONCIERGE
+    </span>
+  </div>
+);
+
 export default function App() {
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
@@ -116,11 +145,7 @@ export default function App() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <span className={`text-2xl tracking-tighter font-serif font-bold ${isScrolled ? 'text-brand-accent' : 'text-white'}`}>
-              CALYX CONCIERGE
-            </span>
-          </div>
+          <Logo isScrolled={isScrolled} />
           
           {/* Desktop Nav */}
           <div className={`hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest ${isScrolled ? 'text-brand-ink' : 'text-white'}`}>
@@ -432,9 +457,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             <div>
-              <div className="font-serif text-brand-accent text-lg font-bold tracking-tight mb-4">
-                CALYX CONCIERGE
-              </div>
+              <Logo isScrolled={true} className="mb-4" />
               <p className="max-w-xs leading-relaxed">
                 Southwest Florida's premier Professional Home Watch and property care specialists. Providing peace of mind for absent homeowners.
               </p>
