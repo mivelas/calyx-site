@@ -392,7 +392,7 @@ export default function App() {
                 </div>
                 <div>
                   <p className="text-sm text-brand-ink/60 uppercase tracking-wider font-semibold">Email Us</p>
-                  <p className="font-medium">hello@calyxconcierge.com</p>
+                  <p className="font-medium">info@calyxconcierge.com</p>
                 </div>
               </div>
               <div className="flex items-center gap-4 text-brand-ink">
