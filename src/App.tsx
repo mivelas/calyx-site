@@ -28,7 +28,7 @@ const SERVICES = [
     title: 'Logistics & Cleaning',
     description: 'Coordinating professional cleaning, turnover services, and pristine vendor access management.',
     extendedDescription: 'Experience the luxury of a perpetually perfect home. We manage all scheduling and coordination of cleaning staff, landscape crews, and essential deliveries so you don\'t have to make a single call.',
-    features: ['Pre-arrival cleaning & prep', 'Post-departure turnover', 'Vendor & contractor access management', 'Package & mail retrieval'],
+    features: ['Pre-arrival cleaning & prep', 'Pre-arrival refrigerator stocking', 'Post-departure turnover', 'Plant watering & care','Vendor & contractor access management', 'Package & mail retrieval'],
     icon: Sparkles,
   },
   {
@@ -37,13 +37,6 @@ const SERVICES = [
     extendedDescription: 'Complex properties require continuous upkeep. We maintain an elite network of experts ready for any scale of work—from quick handyman repairs to major renovations overseen by licensed general contractors.',
     features: ['Access to licensed general contractors', 'Reliable handyman referral & oversight', 'HVAC monitoring & filter changes', 'Emergency repair dispatch'],
     icon: Wrench,
-  },
-  {
-    title: 'Pet & Lifestyle Care',
-    description: 'In-home pet sitting, plant watering, and "welcome home" grocery stocking for a seamless return.',
-    extendedDescription: 'Your peace of mind extends to your furry family members and the comfort of your return. We provide premier care tailored to your lifestyle, ensuring every aspect of your life runs smoothly.',
-    features: ['In-home pet sitting & daily walks', 'Pre-arrival refrigerator stocking', 'Plant watering & care', 'Personal errand running'],
-    icon: Dog,
   },
   {
     title: 'IT Consultant Services',
@@ -348,19 +341,6 @@ export default function App() {
               <p>
                 That firsthand experience is why Calyx was founded. When we survey your property post-storm, or during our routine weekly home watch visits, we're looking with the experienced eyes of locals who know exactly what to check. Additionally, as a fully bilingual team (English and Spanish), we ensure clear, seamless communication with you and a wide network of local vendors.
               </p>
-              <div className="p-8 bg-white rounded-xl border border-brand-accent/10 shadow-sm mt-12 flex flex-col md:flex-row gap-6 items-start">
-                <div className="w-12 h-12 bg-brand-sand rounded-md flex items-center justify-center shrink-0">
-                  <Dog className="w-6 h-6 text-brand-accent" />
-                </div>
-                <div>
-                  <h4 className="font-serif text-2xl text-brand-accent mb-3">
-                    Family & Furry Friends
-                  </h4>
-                  <p className="text-base text-brand-ink/80">
-                    As devoted pet owners and plant enthusiasts ourselves, we understand that "property" doesn't capture the whole picture. It's your home. We treat your pets, your delicate landscaping, and your sanctuary with the exact level of care and tenderness we demand for our own.
-                  </p>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>
